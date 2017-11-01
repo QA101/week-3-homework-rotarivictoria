@@ -1,45 +1,292 @@
-Array Homework
+/*Array Homework
+*
+*1)Write a program which takes as input 1D- array and finds maximum number , it’s
+*index value.
+*/
+public class MaxNumber 
+{
+	public static void main(String[] args) 
+	{
 
-1)Write a program which takes as input 1D- array and finds maximum number , it’s
-index value.
+		int a[] = new int[] { 12, 44, 23, 56, 23, 78, 13 };
 
-2)Write a program which takes as input 1D- array and finds minimum number, it’s
-index value.
+		int max = a[0];
+		int index = 0;
 
-3) Write a program which takes as input 2D- array and finds maximum number , it's
-index value.
+		for (int i = 0; i < a.length; i++) 
+		{
+			if (max < a[i]) 
+			{
+				max = a[i];
+				index = i;
+			}
+		}
 
-4) Write a program which takes as input 2D- array and finds minimum number, it's
-index value.
+		System.out.println("Index position of Maximum value in an array is  :  " + index);
+		System.out.println("Maximum value in an array is  :  " + max);
+} }
+/*
+*2)Write a program which takes as input 1D- array and finds minimum number, it’s
+*index value.
+*/
+public class MinNumber 
+{
+	public static void main(String[] args) 
+	{
+		int a[] = new int[] { 23, 34, 13, 64, 72, 90, 10, 15, 9, 27 };
 
-5) Write a program which takes as input 1D- array and reverse an array.
+		int min = a[0]; 
+		int index = 0;
+		
+		for (int i = 1; i < a.length; i++)  
+		{
+			if (a[i] < min) 
+			{
+				min = a[i];
+				index=i;
+			}
+		}
 
-6) 
-6.1 Write a program which takes as input two 1D- array and find the sum of two
-array and store results in new array.
-Example: input : int [] a ={1,2,3,4};
-int[] b = {10,20,30,40};
-output : int [] c = {11,22,33,44};
+/*3) Write a program which takes as input 2D- array and finds maximum number , it's
+*index value.
+*/
+import java.util.Arrays;
+
+public class MaxNumber {
 
 
-6.2 Write a program which takes as input two 1D- array and find the difference of
-two array and store results in new array.
-Example: input : int [] a ={1,2,3,4};
-int[] b = {10,20,30,40};
-output : int [] c = {-9,- 18, -27,- 36};
+    public static void main(String[] args) {
+        int[][] a = {{3, 2, 5},
+            {1, 39, 4, 8, 13}};
+        
+        int max = Integer.MIN_VALUE;
+		int indexY = 0;
+		int indexZ = 0;
+		for(int y = 0; y < a.length;y++) {
+			for(int z =0; z <a.length;z++) {
+				if(a [y][z]>max) {
+					max = a[y][z];
+					indexY= y;
+					indexZ = z;
+				}
+			}
+		}
+		System.out.println("Max value is: "+ max+"  row: "+indexY+ " column "+indexZ);
+	}
+}
 
-7) Write a program which takes as input 1D- array and prints even numbers in the
-array.
+/*
+*4) Write a program which takes as input 2D- array and finds minimum number, it's
+*/index value.
 
-8) Write a program which takes as input 1D- array and prints odd numbers in the
-array.
+import java.util.Arrays;
 
-9) Write a program which takes as input 1D- array and prints positive numbers in
-the array.
+public class MinNumber {
 
-10) Write a program which takes as input 1D- array and prints negative numbers
-in the array.
 
-11) Write a program which takes as input 1D- array which contains first 25
-numbers and prints prime numbers in the array.
-prime nos: divisible by itself. Examples are 2, 3, 5, 7, 11,13, 17,19, 23.
+    public static void main(String[] args) {
+        int[][] arr = 
+        	{{3, 2, 5},		// Row #0 { 0, 1, 2 }
+            {1, 39, 4, 8, 13}}; // Row #1 { 0, 1, 2, 3, 4 }
+        
+        minNumber(arr);
+    }
+        
+    private static void minNumber(int[][] arr) {
+		
+		int min = Integer.MAX_VALUE;
+	 	int minI = 0;
+	 	int minJ = 0;
+	 	for(int i = 0; i < arr.length;i++) {
+	 		for(int j = 0; j < arr[i].length;j++) {
+	 			if(arr[i][j] < min) {
+	 				min = arr[i][j];
+					minI= i;
+					minJ = j;
+				}
+			}
+	 	}
+	 	System.out.println("Min number is: "+ min+" at row: "+minI+ " and column "+minJ);
+	 }
+}
+
+
+
+//5) Write a program which takes as input 1D- array and reverse an array.
+
+public class Project3 {
+	public static void main (String [] args) {
+		int [] arr = {1,2,3,4}; 
+		int start = 0;
+		int end = arr.length - 1;
+		reverseArray(arr, start, end);
+		
+		System.out.print("Reversed array: ");
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + ",");
+		}
+		System.out.println();
+	}
+			
+	private static void reverseArray(int arr[], int start, int end)
+	{
+	    while (start < end)
+	    {
+	        int temp = arr[start];      
+	        arr[start] = arr[end];            
+	        arr[end] = temp;
+	        start++;
+	        end--;
+	    }   
+	}  
+}
+//6) 
+//6.1 Write a program which takes as input two 1D- array and find the sum of two
+//array and store results in new array.
+//Example: input : int [] a ={1,2,3,4};
+//int[] b = {10,20,30,40};
+//output : int [] c = {11,22,33,44};
+
+public class AdvancedArray5 {
+ 
+ 	public static void main(String[] args) {
+ 		
+ 		int [] a = {1,2,3,4};
+ 		int [] b = {10,20,30,40};
+ 		int  [] c = new int [a.length];
+ 		for (int i = 0; i < a.length; i++) {
+ 		c[i] = a[i] + b[i];
+ 			System.out.print (c[i]+ " " );
+ 		}
+ 		
+ 
+ }
+ 
+ } 
+
+//6.2 Write a program which takes as input two 1D- array and find the difference of
+//two array and store results in new array.
+//Example: input : int [] a ={1,2,3,4};
+//int[] b = {10,20,30,40};
+//output : int [] c = {-9,- 18, -27,- 36};
+
+public class AdvancedArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int [] a = {1,2,3,4};
+		 	int [] b = {10,20,30,40};
+		 	int  [] c = new int [a.length];
+		 	for (int i = 0; i < a.length; i++) {
+		 	c[i] = a[i] - b[i];
+		 		System.out.print (c[i]+ " " );
+	}
+
+}
+}
+
+//7) Write a program which takes as input 1D- array and prints even numbers in the
+//array.
+
+public class AdvancedArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int [] a = {1,2,3,4};
+		 	int [] b = {10,20,30,40};
+		 	int  [] c = new int [a.length];
+		 	for (int i = 0; i < a.length; i++) {
+		 	c[i] = a[i] - b[i];
+		 		System.out.print (c[i]+ " " );
+	}
+
+}
+}
+
+//8) Write a program which takes as input 1D- array and prints odd numbers in the
+//array.
+
+public class AdvancedArray {
+
+		 
+		 public static void main(String[] args) {
+		 		// TODO Auto-generated method stub
+				int a [] = {12,8,3,21};
+				for (int i = 0; i < a.length; i++) {
+		 	if (a[i]%2 == 0) {
+			//	System. out. print ( "Even: ");
+				System. out. println ( "Even = " + a[i] );
+		 		
+		 	} else {
+		 		
+		 		System. out. println ("Odd = " + a[i]);
+		 	}
+		 		}
+		 	}
+		        
+		 
+		 	}
+
+//9) Write a program which takes as input 1D- array and prints positive numbers in
+//the array.
+
+public class AdvancedArray {
+       
+public static void main(String[] args) {
+    int[] arr  = {1,-99,5,-17,3};
+        
+        	 	for(int i:arr) {
+        	 			if(i>0) {
+        	 				System.out.print(i+" ");
+        	 			}		
+        	 	}
+        }
+}
+
+
+//10) Write a program which takes as input 1D- array and prints negative numbers
+//in the array.
+
+public class AdvancedArray {
+       
+public static void main(String[] args) {
+    int[] arr  = {1,-99,5,-17,3};
+        
+        	 	for(int i:arr) {
+        	 			if(i<0) {
+        	 				System.out.print(i+" ");
+        	 			}		
+        	 	}
+        }
+}
+       
+
+//11) Write a program which takes as input 1D- array which contains first 25
+//numbers and prints prime numbers in the array.
+//prime nos: divisible by itself. Examples are 2, 3, 5, 7, 11,13, 17,19, 23.
+
+public class AdvancedArray {
+	public static void main(String[] args) {
+	    int[] arr  = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25};
+       
+	for(int i:arr) {
+		 		if(isPrime(i)&&i!=1) {
+		 				System.out.print(i+" ");
+		 			}		
+		 		}
+		 		System.out.println();
+		 	}
+
+	private static boolean isPrime(int i) {
+		// TODO Auto-generated method stub
+		boolean prime = true;
+		 		int index = 2;
+		 		while(index<i) {
+		 			if(i%index==0) {
+		 				return false;
+		 			}
+		 			index++;
+		 		}	
+		 		return prime;
+		}
+	}
