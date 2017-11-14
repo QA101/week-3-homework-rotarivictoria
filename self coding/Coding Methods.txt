@@ -32,8 +32,8 @@ mport java.util.Scanner;
 public class MethodHomework3 {
 
 	
-		public static void printFirstFiveEvenNumbers() {
-				public static void printFirstFiveEvenNumbers(int num) {
+		public static void printFirstFiveOddNumbers() {
+				public static void printFirstFiveOddNumbers(int num) {
 			  		int i = 1;
 					while(i<=10) {
 				while(i<=num) {
