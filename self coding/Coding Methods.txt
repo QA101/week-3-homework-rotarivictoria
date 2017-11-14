@@ -1,14 +1,54 @@
 
 
 
-Programming exercises for Methods:
+//Programming exercises for Methods:
 
-1. Write a method which takes as input as a one number and returns first five even
-numbers.
-2. Write a method which takes as input as a one number and returns first ten odd
-numbers.
-3. Write a method which takes as input as a one number and returns first seven
-square numbers.
+//1. Write a method which takes as input as a one number and returns first five even
+//numbers.
+mport java.util.Scanner;
+
+public class MethodHomework3 {
+
+	
+		public static void printFirstFiveEvenNumbers() {
+				public static void printFirstFiveEvenNumbers(int num) {
+			  		int i = 1;
+					while(i<=10) {
+				while(i<=num) {
+			  			if(i%2==0) {
+			  				System.out.print(i+" ");
+			  			}
+			  			i++;
+			  		}
+			  		System.out.println();
+			  	}
+				}
+		}
+
+//2. Write a method which takes as input as a one number and returns first ten odd
+//numbers.
+mport java.util.Scanner;
+
+public class MethodHomework3 {
+
+	
+		public static void printFirstFiveEvenNumbers() {
+				public static void printFirstFiveEvenNumbers(int num) {
+			  		int i = 1;
+					while(i<=10) {
+				while(i<=num) {
+			  			if(i%2!=0) {
+			  				System.out.print(i+" ");
+			  			}
+			  			i++;
+			  		}
+			  		System.out.println();
+			  	}
+				}
+		}
+
+// 3. Write a method which takes as input as a one number and returns first seven
+// square numbers.
 4. Write a method which takes as input as a one number and returns the sum of a
 number.
 5. Write a method which takes as input as a one number and returns the product of
